@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile Card</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="profile-card">
+
+    {% if image_url %}
+        <img src="{{ image_url }}" alt="Profile Image">
+    {% else %}
+        <div class="avatar">
+            {{ name[0] | upper }}
+        </div>
+    {% endif %}
+
+    <h1>{{ name }}</h1>
+
+    <p>{{ bio }}</p>
+
+    <a href="/">Create Another Profile</a>
+
+</div>
+
+</body>
+</html>
